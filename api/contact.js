@@ -23,11 +23,23 @@ export default async function handler(req, res) {
   }
 
   try {
-    console.log('Initializing NotificationAPI...');
+    console.log('Initializing NotificationAPI with EU region...');
     notificationapi.init(
       process.env.NOTIFICATIONAPI_CLIENT_ID,
       process.env.NOTIFICATIONAPI_CLIENT_SECRET
     );
+    // Force EU Base URL (The library might not expose the config option in init directly in all versions, 
+    // but the user's snippet suggests it does, or we might need to set it on the instance if init return void)
+    // Actually, checking the user snippet: notificationapi.init(clientId, clientSecret, { baseURL: ... });
+    // Let's match that signature.
+    
+    // RE-INIT with config object
+    notificationapi.init(
+        process.env.NOTIFICATIONAPI_CLIENT_ID, 
+        process.env.NOTIFICATIONAPI_CLIENT_SECRET,
+        { baseURL: 'https://api.eu.notificationapi.com' }
+    );
+    
     console.log('NotificationAPI initialized.');
 
     console.log('Sending notification...');
