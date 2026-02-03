@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Sprout, Lightbulb, Heart } from 'lucide-react';
+import { Footprints, Brain, Heart } from 'lucide-react';
 import InfoModal from './InfoModal';
 import './Hero.css';
 
@@ -42,34 +42,37 @@ export default function Hero() {
           <div className="circle-bg"></div>
           <img src="/images/hero-bg.png" alt="Growth Abstract" className="hero-image-bg" />
           
+          {/* Card 1: Change / Movement - Blue (matches Person/Logo) */}
           <motion.div 
             className="floating-card card-1"
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             onClick={() => setShowModal(true)}
           >
-            <Sprout className="icon" size={24} color="var(--color-sage)" />
-            <span>צמיחה</span>
+            <Footprints className="icon" size={24} color="var(--color-sky)" />
+            <span>שינוי</span>
           </motion.div>
           
+          {/* Card 2: Balance / Brain - Green (matches Brain/Logo) */}
           <motion.div 
             className="floating-card card-2"
             animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
             onClick={() => setShowModal(true)}
           >
-            <Lightbulb className="icon" size={24} color="#F59E0B" />
-            <span>בהירות</span>
+            <Brain className="icon" size={24} color="var(--color-sage)" />
+            <span>איזון</span>
           </motion.div>
           
+          {/* Card 3: Security / Heart - Red (matches Heart/Logo) */}
           <motion.div 
             className="floating-card card-3"
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 2 }}
             onClick={() => setShowModal(true)}
           >
-            <Heart className="icon" size={24} color="#EF4444" />
-            <span>הכלה</span>
+            <Heart className="icon" size={24} color="var(--color-terracotta)" />
+            <span>ביטחון</span>
           </motion.div>
         </motion.div>
       </div>
