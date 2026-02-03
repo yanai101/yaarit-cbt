@@ -7,20 +7,28 @@ export default async function handler(req, res) {
 
   const { name, phone, subject, message } = req.body;
 
-  // SECURITY NOTE: In a production team environment, these should be Environment Variables.
-  // Using direct values for immediate deployment as requested by user.
-  const clientId = '7g9mabb041f4v4xqnuhw76go7v';
-  const clientSecret = '033o4wghjalrgz4rwsmvi5bm569r5ke34pzlt6ua9ufb9cqjim8and7t2e';
-  const notificationId = 'yaarit_cbt';
+  console.log(process.env.NOTIFICATIONAPI_CLIENT_ID);
+  console.log(process.env.NOTIFICATIONAPI_CLIENT_SECRET);
+  console.log(process.env.NOTIFICATIONAPI_NOTIFICATION_ID);
+  console.log(process.env.NOTIFICATIONAPI_USER_ID);
+  console.log(req.body);
 
-  notificationapi.init(clientId, clientSecret);
+  if (!process.env.NOTIFICATIONAPI_CLIENT_ID || !process.env.NOTIFICATIONAPI_CLIENT_SECRET) {
+    console.error('Missing NotificationAPI credentials');
+    return res.status(500).json({ error: 'Server configuration error' });
+  }
+
+  notificationapi.init(
+    process.env.NOTIFICATIONAPI_CLIENT_ID,
+    process.env.NOTIFICATIONAPI_CLIENT_SECRET
+  );
 
   try {
     await notificationapi.send({
-      notificationId: notificationId,
+      notificationId: process.env.NOTIFICATIONAPI_NOTIFICATION_ID || 'contact_form',
       user: {
-        id: 'admin_owner', // Unique ID for the recipient (site owner)
-        email: 'yaaritcbt@gmail.com', // The email address to receive notifications
+        id: process.env.NOTIFICATIONAPI_USER_ID || 'admin_user',
+        email: 'yaaritcbt@gmail.com',
       },
       mergeTags: {
         name,
