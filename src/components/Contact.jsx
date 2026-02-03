@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
             <div className="contact-item">
               <MapPin size={20} color="var(--color-sage)" />
-              <span>קליניקה פרטית ב[עיר], או בזום</span>
+              <span>קליניקה פרטית בירוחם, או בזום</span>
             </div>
           </div>
         </div>
