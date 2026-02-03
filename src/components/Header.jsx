@@ -22,7 +22,7 @@ export default function Header() {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-content">
         <a href="#" className="logo">
-          <Leaf className="logo-icon" size={28} />
+          <img src="/favicon.png" alt="לוגו יערית" className="logo-image" />
           יערית
         </a>
 
