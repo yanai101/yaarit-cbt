@@ -46,8 +46,9 @@ export default async function handler(req, res) {
     await notificationapi.send({
       notificationId: process.env.NOTIFICATIONAPI_NOTIFICATION_ID || 'yaarit_cbt',
       user: {
-        id: process.env.NOTIFICATIONAPI_USER_ID || 'admin_owner',
+        id: 'yaaritcbt@gmail.com',
         email: 'yaaritcbt@gmail.com',
+        number: '+972506989894' // User request: +972506989894
       },
       mergeTags: {
         name,
