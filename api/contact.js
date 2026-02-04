@@ -55,6 +55,8 @@ export default async function handler(req, res) {
         phone,
         subject,
         message,
+        comment: `${name} - ${phone} :
+                     ${subject}`
       },
     });
     console.log('Notification sent successfully.');
