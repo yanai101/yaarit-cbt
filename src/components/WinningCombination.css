@@ -1,0 +1,82 @@
+.winning-combo-section {
+  padding: 6rem 0;
+  background-color: rgba(156, 175, 136, 0.15); /* Soft Sage Green */
+  position: relative;
+  overflow: hidden;
+}
+
+.winning-combo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  max-width: 900px;
+}
+
+.combo-icon-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.icon-bg {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(156, 175, 136, 0.2);
+}
+
+.icon-heart {
+  color: var(--color-terracotta);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-pencil {
+  color: var(--color-sage);
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  transform: rotate(-15deg);
+  filter: drop-shadow(2px 2px 0px white); /* Outline effect */
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.section-title {
+  color: var(--color-text);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.combo-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .winning-combo-section {
+    padding: 4rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .combo-text {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
+.combo-disclaimer { margin-top: 1.5rem; font-size: 1.1rem; color: var(--color-sage); }

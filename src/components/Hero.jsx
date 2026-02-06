@@ -1,15 +1,46 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Footprints, Brain, Heart } from 'lucide-react';
+import { Brain, Heart, Pencil, House, Footprints } from 'lucide-react';
 import InfoModal from './InfoModal';
+import CBTInfoContent from './CBTInfoContent';
+import ParentingInfoContent from './ParentingInfoContent';
+import RemedialInfoContent from './RemedialInfoContent';
 import './Hero.css';
 
+const MODAL_CONTENT = {
+  cbt: {
+    title: "מהו טיפול CBT?",
+    subtitle: "טיפול קוגניטיבי-התנהגותי (Cognitive Behavioral Therapy)",
+    content: <CBTInfoContent />,
+    actionLabel: "תיאום שיחת היכרות",
+    onAction: "#contact"
+  },
+  remedial: {
+    title: "כשהלמידה הופכת להזדמנות להצלחה",
+    content: <RemedialInfoContent />,
+    actionLabel: "לתיאום פגישת אבחון ושיחת הכרות",
+    onAction: "#contact"
+  },
+  parents: {
+    title: "השותפים המרכזיים להצלחה",
+    content: <ParentingInfoContent />,
+    actionLabel: "לתיאום שיחת ייעוץ להורים",
+    onAction: "#contact"
+  }
+};
+
 export default function Hero() {
-  const [showModal, setShowModal] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
+
+  const handleClose = () => setActiveModal(null);
 
   return (
     <section className="hero">
-      <InfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <InfoModal 
+        isOpen={!!activeModal} 
+        onClose={handleClose} 
+        modalData={activeModal ? MODAL_CONTENT[activeModal] : null}
+      />
       
       <div className="container hero-container">
         <motion.div 
@@ -19,13 +50,11 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="hero-title">
-            יערית - טיפול CBT <br />
+            יערית – טיפול CBT <br />
             <span className="highlight">ממוקד בגובה העיניים</span>
           </h1>
           <p className="hero-subtitle">
-            כלים פרקטיים לשינוי דפוסי מחשבה והתנהגות בדרך רגישה ומכילה.
-            <br />
-            מיועד לילדים (מגיל 8), נוער ומבוגרים.
+            מטפלת CBT מוסמכת ומומחית להוראה מתקנת. ליווי רגשי וכלים פרקטיים לשינוי משמעותי עבור ילדים (מגיל 8), נוער ומבוגרים.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-lg">לתיאום שיחת היכרות ראשונית</a>
@@ -42,37 +71,37 @@ export default function Hero() {
           <div className="circle-bg"></div>
           <img src="/images/hero-bg.png" alt="Growth Abstract" className="hero-image-bg" />
           
-          {/* Card 1: Change / Movement - Blue (matches Person/Logo) */}
+          {/* Card 1: CBT - Blue */}
           <motion.div 
             className="floating-card card-1"
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            onClick={() => setShowModal(true)}
+            onClick={() => setActiveModal('cbt')}
           >
-            <Footprints className="icon" size={24} color="var(--color-sky)" />
-            <span>שינוי</span>
+            <Brain className="icon" size={24} color="var(--color-sky)" />
+            <span>טיפול CBT ממוקד</span>
           </motion.div>
           
-          {/* Card 2: Balance / Brain - Green (matches Brain/Logo) */}
+          {/* Card 2: Remedial - Green (Sage) with Composite Icon */}
           <motion.div 
             className="floating-card card-2"
             animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-            onClick={() => setShowModal(true)}
+            onClick={() => setActiveModal('remedial')}
           >
-            <Brain className="icon" size={24} color="var(--color-sage)" />
-            <span>איזון</span>
+            <Footprints className="icon" size={24} color="var(--color-sage)" />
+            <span>הוראה מתקנת וכלים</span>
           </motion.div>
           
-          {/* Card 3: Security / Heart - Red (matches Heart/Logo) */}
+          {/* Card 3: Parents - Terracotta/Red */}
           <motion.div 
             className="floating-card card-3"
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 2 }}
-            onClick={() => setShowModal(true)}
+            onClick={() => setActiveModal('parents')}
           >
             <Heart className="icon" size={24} color="var(--color-terracotta)" />
-            <span>ביטחון</span>
+            <span>ליווי והדרכה להורים</span>
           </motion.div>
         </motion.div>
       </div>
