@@ -7,19 +7,19 @@ export default function HowItWorks() {
     {
       title: "מחשבות (Thoughts)",
       icon: <Brain size={32} color="white" />,
-      desc: "זיהוי דפוסי חשיבה שליליים או מעכבים שמייצרים סבל.",
+      desc: "שינוי דפוסי חשיבה מעכבים והתמודדות עם פחדים וחרדות.",
       color: "var(--color-sage)"
     },
     {
       title: "רגשות (Feelings)",
       icon: <Heart size={32} color="white" />,
-      desc: "הבנה של העולם הרגשי שלנו ואיך הוא מושפע מהפרשנות שלנו למציאות.",
+      desc: "מתן כלים לוויסות רגשי, התמודדות עם התפרצויות כעס ותסכול.",
       color: "var(--color-terracotta)"
     },
     {
       title: "התנהגויות (Behaviors)",
       icon: <Footprints size={32} color="white" />,
-      desc: "שינוי דפוסי פעולה כדי לשבור מעגלים שליליים וליצור מציאות חדשה.",
+      desc: "חיזוק הביטחון העצמי, מיומנויות חברתיות ויצירת שיתוף פעולה בבית.",
       color: "var(--color-sky)"
     }
   ];

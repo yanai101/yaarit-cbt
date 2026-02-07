@@ -54,7 +54,7 @@ export default function Hero() {
             <span className="highlight">ממוקד בגובה העיניים</span>
           </h1>
           <p className="hero-subtitle">
-            מטפלת CBT מוסמכת ומומחית להוראה מתקנת. ליווי רגשי וכלים פרקטיים לשינוי משמעותי עבור ילדים (מגיל 8), נוער ומבוגרים.
+            ליווי רגשי ומעשי לילדים והורים המתמודדים עם קשיים בוויסות, חרדה או תסכול – בגישה רגישה ובגובה העיניים. מטפלת CBT מוסמכת ומומחית להוראה מתקנת.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-lg">לתיאום שיחת היכרות ראשונית</a>

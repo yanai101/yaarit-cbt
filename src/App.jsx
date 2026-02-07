@@ -4,6 +4,7 @@ import WinningCombination from './components/WinningCombination'
 import About from './components/About'
 import WhatIsCBT from './components/WhatIsCBT'
 import HowItWorks from './components/HowItWorks'
+import TheProcess from './components/TheProcess'
 import TargetAudience from './components/TargetAudience'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
@@ -19,6 +20,7 @@ function App() {
       <About />
       <WhatIsCBT />
       <HowItWorks />
+      <TheProcess />
       <WinningCombination />
       <TargetAudience />
       <FAQ />

@@ -99,7 +99,7 @@ export default function Contact() {
           <div className="form-header">
              <h3>צעד ראשון לשינוי משמעותי</h3>
              <p className="form-subtitle">השאירו פרטים ואחזור אליכם בהקדם</p>
-             <p className="form-reassurance">אם יש התלבטות – זה טבעי. אפשר להתחיל משיחה קצרה, בלי התחייבות.</p>
+             <p className="form-reassurance">אם יש התלבטות – זה טבעי. אפשר להתחיל משיחה קצרה, ללא התחייבות, כדי לבדוק מה מתאים לכם.</p>
           </div>
 
           <div className="form-group">
