@@ -1,0 +1,140 @@
+.process-section {
+  background-color: #F9F7F2;
+  padding: 6rem 0;
+}
+
+.process-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+
+.step-icon-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover .icon-circle {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.step-connector-line {
+  display: none; /* Mobile default */
+}
+
+.step-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.step-content h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* ~20% larger */
+  font-weight: 800;
+}
+
+.step-content p {
+  color: var(--color-text);
+  line-height: 1.8; /* Increased line height */
+  font-size: 1.1rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .process-timeline {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .step-connector-line {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -35%; /* Extend to the LEFT towards next item */
+    width: 60%; 
+    height: 0;
+    border-top: 3px dotted #dcdcdc;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+
+  /* Fix for last connector - though we handle this in JSX, explicitly hiding just in case */
+  .process-step:last-child .step-connector-line {
+    display: none;
+  }
+  
+  /* Arrow pointing LEFT (<--) */
+  .step-connector-line::after {
+    content: '';
+    position: absolute;
+    left: -5px; /* Position at the left end of the line */
+    top: -6px;
+    width: 0; 
+    height: 0; 
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 8px solid #dcdcdc; /* Triangle pointing Left */
+  }
+
+  .step-content {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .step-number {
+     display: none;
+  }
+}

@@ -11,8 +11,12 @@ export default function WinningCombination() {
           className="combo-icon-wrapper"
           initial={{ scale: 0, rotate: -20 }}
           whileInView={{ scale: 1, rotate: 0 }}
+          animate={{ y: [0, -15, 0] }}
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+          transition={{ 
+            scale: { type: "spring", stiffness: 260, damping: 20 },
+            y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+          }}
         >
           <div className="icon-bg">
             <Heart size={64} className="icon-heart" />
