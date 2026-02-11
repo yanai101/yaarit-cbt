@@ -84,10 +84,10 @@ export default function Contact() {
               <Phone size={20} />
               <span>שלחו הודעת וואטסאפ (050-6989894)</span>
             </a>
-            <div className="contact-item">
+            <a href="mailto:yaaritcbt@gmail.com" className="contact-item">
               <Mail size={20} color="var(--color-sage)" />
               <span>yaaritcbt@gmail.com</span>
-            </div>
+            </a>
             <div className="contact-item">
               <MapPin size={20} color="var(--color-sage)" />
               <span>קליניקה פרטית בירוחם, או בזום</span>
