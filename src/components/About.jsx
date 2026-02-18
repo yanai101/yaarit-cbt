@@ -13,7 +13,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
         >
           <div className="image-wrapper">
-             <img src="/images/yaarit-real.png" alt="יערית - מטפלת CBT" className="profile-image" />
+             <img src="/images/yaarit-real.webp" alt="יערית - מטפלת CBT" className="profile-image" width="770" height="1024" loading="lazy" />
           </div>
         </motion.div>
         <motion.div 

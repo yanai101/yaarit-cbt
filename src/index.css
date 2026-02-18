@@ -1,6 +1,7 @@
 :root {
   /* Soft pastel palette */
   --color-sage: #9CAF88;
+  --color-sage-dark: #5F734F; /* Accessible contrast */
   --color-terracotta: #E09F7D;
   --color-beige: #F5F1E6;
   --color-sky: #B8D8E0;
@@ -75,7 +76,7 @@ img {
   border-radius: var(--radius-sm);
   font-weight: 500;
   cursor: pointer;
-  background-color: var(--color-sage);
+  background-color: var(--color-sage-dark);
   color: var(--color-white);
   transition: all 0.3s ease;
   border: none;

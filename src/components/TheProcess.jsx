@@ -8,7 +8,7 @@ export default function TheProcess() {
       icon: <Phone size={48} color="white" />,
       title: "שיחת היכרות",
       desc: "הבנת הצרכים שלכם כהורים ומיפוי האתגרים.",
-      color: "var(--color-sage)"
+      color: "var(--color-sage-dark)"
     },
     {
       icon: <Users size={48} color="white" />,

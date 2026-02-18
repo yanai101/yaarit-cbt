@@ -8,7 +8,7 @@ export default function HowItWorks() {
       title: "מחשבות (Thoughts)",
       icon: <Brain size={32} color="white" />,
       desc: "שינוי דפוסי חשיבה מעכבים והתמודדות עם פחדים וחרדות.",
-      color: "var(--color-sage)"
+      color: "var(--color-sage-dark)"
     },
     {
       title: "רגשות (Feelings)",

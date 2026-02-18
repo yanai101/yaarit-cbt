@@ -69,7 +69,7 @@ export default function Hero() {
         >
           {/* Abstract Growth Illustration */}
           <div className="circle-bg"></div>
-          <img src="/images/hero-bg.png" alt="Growth Abstract" className="hero-image-bg" />
+          <img src="/images/hero-bg.webp" alt="Growth Abstract" className="hero-image-bg" width="1024" height="1024" />
           
           {/* Card 1: CBT - Blue */}
           <motion.div 
@@ -89,7 +89,7 @@ export default function Hero() {
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
             onClick={() => setActiveModal('remedial')}
           >
-            <Footprints className="icon" size={24} color="var(--color-sage)" />
+            <Footprints className="icon" size={24} color="var(--color-sage-dark)" />
             <span>הוראה מתקנת וכלים</span>
           </motion.div>
           

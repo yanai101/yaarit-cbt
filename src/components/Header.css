@@ -57,7 +57,7 @@
 
 .nav a:hover,
 .nav a.active {
-  color: var(--color-sage);
+  color: var(--color-sage-dark);
 }
 
 .btn-sm {

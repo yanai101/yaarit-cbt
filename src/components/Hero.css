@@ -38,7 +38,7 @@
 }
 
 .highlight {
-  color: var(--color-sage);
+  color: var(--color-sage-dark);
   position: relative;
   display: inline-block;
 }
@@ -89,6 +89,7 @@
 
 .hero-image-bg {
     width: 100%;
+    height: auto;
     max-width: 450px;
     position: relative;
     z-index: 1;

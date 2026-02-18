@@ -35,7 +35,7 @@
 
 .contact-item:not(.whatsapp-btn):hover {
     transform: translateX(-5px);
-    color: var(--color-sage);
+    color: var(--color-sage-dark);
 }
 
 .whatsapp-btn {
@@ -85,7 +85,7 @@
 .contact-form h3 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  color: var(--color-sage);
+  color: var(--color-sage-dark);
 }
 
 .form-subtitle {
@@ -160,7 +160,7 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-  background-color: var(--color-sage);
+  background-color: var(--color-sage-dark);
   color: white;
   border-radius: var(--radius-md, 0.5rem);
   font-weight: 600;

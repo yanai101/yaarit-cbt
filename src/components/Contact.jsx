@@ -85,11 +85,11 @@ export default function Contact() {
               <span>שלחו הודעת וואטסאפ (050-6989894)</span>
             </a>
             <a href="mailto:yaaritcbt@gmail.com" className="contact-item">
-              <Mail size={20} color="var(--color-sage)" />
+              <Mail size={20} color="var(--color-sage-dark)" />
               <span>yaaritcbt@gmail.com</span>
             </a>
             <div className="contact-item">
-              <MapPin size={20} color="var(--color-sage)" />
+              <MapPin size={20} color="var(--color-sage-dark)" />
               <span>קליניקה פרטית בירוחם, או בזום</span>
             </div>
           </div>

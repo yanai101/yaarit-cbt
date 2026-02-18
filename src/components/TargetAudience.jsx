@@ -36,7 +36,7 @@ export default function TargetAudience() {
           >
             <div className="card-header">
               <div className="icon-wrapper">
-                <User size={40} color="var(--color-sage)" />
+                <User size={40} color="var(--color-sage-dark)" />
               </div>
               <h3>מבוגרים</h3>
             </div>
