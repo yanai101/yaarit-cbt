@@ -9,8 +9,8 @@ export default function WinningCombination() {
         
         <motion.div 
           className="combo-icon-wrapper"
-          initial={{ scale: 0, rotate: -20 }}
-          whileInView={{ scale: 1, rotate: 0 }}
+          initial={{ scale: 0.95, opacity: 0, rotate: -20 }}
+          whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
           animate={{ y: [0, -15, 0] }}
           viewport={{ once: true }}
           transition={{ 

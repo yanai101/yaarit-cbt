@@ -35,7 +35,7 @@ export default function HowItWorks() {
         <div className="pillars-grid">
           {steps.map((step, index) => (
             <motion.div 
-              key={index} 
+              key={step.title} 
               className="pillar-card" 
               style={{borderTop: `4px solid ${step.color}`}}
               initial={{ opacity: 0, y: 30 }}

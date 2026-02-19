@@ -36,7 +36,7 @@ export default function FAQ() {
         
         <div className="faq-list">
           {faqs.map((faq, index) => (
-            <div key={index} className="faq-item">
+            <div key={faq.question} className="faq-item">
               <button 
                 className={`faq-question ${activeIndex === index ? 'active' : ''}`}
                 onClick={() => toggleFAQ(index)}

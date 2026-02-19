@@ -11,7 +11,7 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-content">
-        <a href="#" className="logo">
+        <a href="/" className="logo">
           <img src="/favicon.png" alt="לוגו יערית" className="logo-image" />
           יערית
         </a>

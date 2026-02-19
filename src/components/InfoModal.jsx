@@ -44,22 +44,28 @@ export default function InfoModal({ isOpen, onClose, modalData }) {
 
             {actionLabel && (
               <div className="modal-actions">
-                <a 
-                  href={onAction || "#contact"} 
-                  className="btn btn-action"
-                  onClick={(e) => {
-                    onClose();
-                    if (!onAction || onAction === '#contact') {
-                      e.preventDefault();
+                {(!onAction || onAction === '#contact') ? (
+                  <button 
+                    className="btn btn-action"
+                    onClick={() => {
+                      onClose();
                       const contactSection = document.getElementById('contact');
                       if (contactSection) {
                         contactSection.scrollIntoView({ behavior: 'smooth' });
                       }
-                    }
-                  }}
-                >
-                  {actionLabel}
-                </a>
+                    }}
+                  >
+                    {actionLabel}
+                  </button>
+                ) : (
+                  <a 
+                    href={onAction} 
+                    className="btn btn-action"
+                    onClick={onClose}
+                  >
+                    {actionLabel}
+                  </a>
+                )}
               </div>
             )}
           </div>
