@@ -110,7 +110,8 @@
   color: var(--color-text);
   z-index: 2;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--color-sage);
 }
 
 .floating-card:hover {
@@ -145,7 +146,93 @@
 .card-2 { bottom: 10%; left: 5%; }
 .card-3 { top: 55%; right: -5%; }
 
+/* Accessibility Focus States */
+.floating-card:focus-visible {
+  outline: 2px solid var(--color-sage-dark);
+  outline-offset: 2px;
+}
 
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 4px;
+}
+
+/* Animations added to CTA */
+.pulse-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.pulse-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(156, 175, 136, 0.6);
+}
+
+.pulse-hover:active {
+  transform: scale(0.98);
+}
+
+/* Custom styling for new MindStep Hero layout */
+.hero-audience {
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(156, 175, 136, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.audience-title {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.audience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.audience-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.check-icon {
+  color: var(--color-sage-dark);
+  flex-shrink: 0;
+}
+
+.hero-actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-actions-container .btn {
+  width: auto;
+  min-width: 250px;
+  text-align: center;
+}
+
+.trust-badge {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 250px;
+}
 @media (max-width: 768px) {
   .hero {
     padding-top: 6rem;
@@ -181,4 +268,18 @@
   .card-1 { right: 5%; top: 5%; }
   .card-2 { left: 5%; bottom: 5%; }
   .card-3 { display: flex; top: 45%; right: 5%; } /* Show all cards on mobile now if possible, or position better */
+  
+  .hero-actions-container {
+    align-items: center;
+    width: 100%;
+  }
+
+  .audience-list {
+    grid-template-columns: 1fr;
+    text-align: right;
+  }
+
+  .hero-audience {
+    text-align: right;
+  }
 }

@@ -22,8 +22,8 @@ export default function Header() {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-content">
         <a href="/" className="logo">
-          <img src="/favicon.png" alt="לוגו יערית" className="logo-image" />
-          יערית
+          <img src="/favicon.png" alt="לוגו MindStep" className="logo-image" />
+          MindStep
         </a>
 
         {/* Desktop Navigation */}
