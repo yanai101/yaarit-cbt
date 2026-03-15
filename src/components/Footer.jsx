@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <p>יערית – טיפול CBT ממוקד בגובה העיניים. מטפלת CBT מוסמכת ומומחית להוראה מתקנת.</p>
+        <p>MindStep – טיפול CBT בגובה העיניים. מטפלת CBT מוסמכת ומומחית להוראה מתקנת.</p>
         <p className="contact-info">
           טלפון: <a href="tel:0506989894">050-6989894</a> | דוא"ל: <a href="mailto:yaaritcbt@gmail.com">yaaritcbt@gmail.com</a>
         </p>
