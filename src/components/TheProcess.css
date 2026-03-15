@@ -110,6 +110,15 @@
     transform: translateY(-50%);
   }
 
+  .step-connector-fill {
+    position: absolute;
+    top: -3px; /* Align perfectly over the top border */
+    left: 0;
+    height: 3px;
+    background-color: var(--color-sage-dark);
+    z-index: 2;
+  }
+
   /* Fix for last connector - though we handle this in JSX, explicitly hiding just in case */
   .process-step:last-child .step-connector-line {
     display: none;

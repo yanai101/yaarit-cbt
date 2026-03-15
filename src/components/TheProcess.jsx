@@ -43,7 +43,17 @@ export default function TheProcess() {
                  <div className="icon-circle" style={{backgroundColor: step.color}}>
                    {step.icon}
                  </div>
-                 {index < processSteps.length - 1 && <div className="step-connector-line"></div>}
+                 {index < processSteps.length - 1 && (
+                   <div className="step-connector-line">
+                     <motion.div 
+                       className="step-connector-fill"
+                       initial={{ width: "0%" }}
+                       whileInView={{ width: "100%" }}
+                       viewport={{ once: true, margin: "-100px" }}
+                       transition={{ duration: 1, delay: index * 0.4 + 0.3, ease: "easeOut" }}
+                     />
+                   </div>
+                 )}
               </div>
               <div className="step-content">
                 <span className="step-number">{index + 1}</span>
