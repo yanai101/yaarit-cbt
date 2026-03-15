@@ -115,7 +115,7 @@
     top: -3px; /* Align perfectly over the top border */
     right: 0;
     height: 3px;
-    background-color: var(--color-sage-dark);
+    background-color: var(--color-sage);
     z-index: 2;
   }
 
