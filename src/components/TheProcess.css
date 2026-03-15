@@ -119,6 +119,19 @@
     z-index: 2;
   }
 
+  /* Animated Arrowhead for the fill line */
+  .step-connector-fill::after {
+    content: '';
+    position: absolute;
+    left: 0px; /* At the far left end of the fill line */
+    top: -4px; /* Centered visually with the line */
+    width: 0; 
+    height: 0; 
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 8px solid var(--color-sage-dark); /* Triangle pointing Left, colored sage */
+  }
+
   /* Fix for last connector - though we handle this in JSX, explicitly hiding just in case */
   .process-step:last-child .step-connector-line {
     display: none;
