@@ -22,7 +22,7 @@ export default function Header() {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-content">
         <a href="/" className="logo">
-          <img src="/mindstep-logo.png" alt="לוגו MindStep" className="logo-image" style={{ objectFit: 'contain' }} />
+          <img src="/mindstep-logo.jpg" alt="לוגו MindStep" className="logo-image" style={{ objectFit: 'contain' }} />
           MindStep
         </a>
 
