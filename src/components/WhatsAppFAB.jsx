@@ -3,7 +3,7 @@ import './WhatsAppFAB.css';
 
 export default function WhatsAppFAB() {
   const phoneNumber = "972506989894";
-  const message = "היי יערית, אשמח להתייעץ לגבי הילד/ה שלי.";
+  const message = "שלום יערית, הגעתי דרך האתר";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
